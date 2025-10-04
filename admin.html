@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Birthday Mixer — Admin</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script defer src="js/helpers.js"></script>
+  <script defer src="js/admin.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Birthday Mixer — Admin</div>
+    <nav class="nav">
+      <a href="index.html">Início</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Visão Geral</h2>
+      <div class="stats-grid">
+        <div class="stat card">
+          <h3 id="totalUsers">0</h3>
+          <p>Usuários cadastrados</p>
+        </div>
+        <div class="stat card">
+          <h3 id="todayRsvps">0</h3>
+          <p>Presenças confirmadas hoje</p>
+        </div>
+        <div class="stat card">
+          <h3 id="premiumCount">0</h3>
+          <p>Contas Premium</p>
+        </div>
+        <div class="stat card">
+          <h3 id="popularVenue">—</h3>
+          <p>Local mais movimentado</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>Crescimento de usuários (últimos 6 meses)</h3>
+      <canvas id="chartUsers"></canvas>
+    </section>
+
+    <section class="card">
+      <h3>Locais mais movimentados</h3>
+      <canvas id="chartVenues"></canvas>
+    </section>
+
+    <section class="card">
+      <h3>Proporção Premium x Gratuita</h3>
+      <canvas id="chartPremium"></canvas>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>© 2025 Birthday Mixer — Admin</small>
+  </footer>
+</body>
+</html>
