@@ -21,7 +21,7 @@ class Auth {
     }
 
     if (this.email === "admin@mix.com") {
-      window.location.href = "admin.html";
+      window.location.href = "../private/admin.html";
     }
   }
 }
@@ -65,7 +65,7 @@ class UI {
     const ages = birthdayRsvps
       .map((r) => {
         const userData = JSON.parse(
-          localStorage.getItem(`bm_user_${r.email}`) || "{}"
+          localStorage.getItem(`bm_user_${r.email}`) || "{}",
         );
         return userData.birthdate
           ? new Date().getFullYear() -
@@ -128,7 +128,7 @@ class App {
         this.user.premium = true;
         localStorage.setItem(
           `bm_user_${this.user.email}`,
-          JSON.stringify(this.user)
+          JSON.stringify(this.user),
         );
         UI.showMessage(container, "Upgrade aplicado com sucesso!", "success");
         setTimeout(() => location.reload(), 1200);

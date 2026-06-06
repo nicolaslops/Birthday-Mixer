@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Birthday Mixer — Locais</title>
+    <link rel="stylesheet" href="../style/styles.css" />
+    <script defer src="../scripts/helpers.js"></script>
+    <script defer src="../scripts/venues.js"></script>
+    <script defer src="../scripts/maps.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">Birthday Mixer</div>
+      <nav class="nav">
+        <a href="main.html">Início</a>
+        <a id="logoutLink" href="#">Sair</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <h2>Locais parceiros</h2>
+        <ul id="venueList" class="venue-list"></ul>
+      </section>
+      <section class="card">
+        <h3>Mapa completo</h3>
+        <div
+          id="miniMapFull"
+          class="map"
+          style="height: 420px; border-radius: 10px"
+        ></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <small>© 2025 Birthday Mixer</small>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  </body>
+</html>

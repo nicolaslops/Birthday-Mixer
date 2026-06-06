@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Birthday Mixer — Premium</title>
+    <link rel="stylesheet" href="../style/styles.css" />
+    <script defer src="../scripts/helpers.js"></script>
+    <script defer src="../scripts/payment.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">Birthday Mixer</div>
+      <nav class="nav">
+        <a href="../index.html">Início</a>
+        <a href="main.html">Dashboard</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <h2>Plano Premium</h2>
+        <p class="muted">
+          Benefícios: 1 bebida + aperitivo, fila preferencial e vantagens
+          exclusivas.
+        </p>
+        <div class="plans">
+          <div class="plan card">
+            <h3>Premium</h3>
+            <p><strong>R$89,90</strong></p>
+            <button class="btn-primary buy" data-plan="anual">Assinar</button>
+          </div>
+        </div>
+        <div
+          id="premiumMsg"
+          class="message-box"
+          aria-live="polite"
+          hidden
+        ></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <small>© 2025 Birthday Mixer</small>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll(".buy").forEach((b) => {
+          b.addEventListener("click", async () => {
+            const plan = b.dataset.plan;
+            const box = createMessageBox(".card");
+            showMessage(box, "Processando pagamento...", "success");
+            const res = await simulatePayment(2990, "Plano " + plan);
+            if (res && res.ok) {
+              showMessage(
+                box,
+                "Pagamento simulado com sucesso! Ativando plano...",
+                "success",
+                2000,
+              );
+              setTimeout(() => {
+                window.location.href = "main.html";
+              }, 1400);
+            } else {
+              showMessage(box, "Falha no pagamento (simulado).", "error");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

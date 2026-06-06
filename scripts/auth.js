@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const age = Math.floor(
         (Date.now() - new Date(birthdate).getTime()) /
-          (365.25 * 24 * 3600 * 1000)
+          (365.25 * 24 * 3600 * 1000),
       );
 
       if (age < 16) {
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
         box,
         "Conta criada com sucesso! Redirecionando...",
         "success",
-        1200
+        1200,
       );
 
       setTimeout(() => {
@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
         sessionStorage.setItem("bm_user", "admin@mix.com");
         showMessage(box, "Entrando como admin...", "success", 800);
         setTimeout(() => {
-          window.location.href = "admin.html";
+          window.location.href = "../private/admin.html";
         }, 800);
         return;
       }

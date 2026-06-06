@@ -1,87 +1,125 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Birthday Mixer: Conecte-se com pessoas que fazem aniversário no mesmo dia. Encontre festas coletivas, benefícios exclusivos e crie novas histórias em ambientes seguros e divertidos.">
-  <title>Birthday Mixer — Conecte-se, comemore e crie novas histórias</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-  <script defer src="js/helpers.js"></script>
-</head>
-<body>
-  <header class="header">
-    <div class="logo">
-      <a href="index.html">Birthday Mixer</a>
-    </div>
-  </header>
-
-  <main class="container hero">
-    <section class="hero-card card">
-      <h1 class="slogan">Birthday Mixer</h1>
-      <p class="tagline">Conecte-se, comemore e crie novas histórias.</p>
-      <p class="lead">Descubra festas coletivas exclusivas para quem faz aniversário no mesmo dia. Aproveite benefícios como entrada gratuita ou com desconto, ambiente seguro e monitorado, e a oportunidade de conhecer pessoas incríveis enquanto celebra de forma única e memorável.</p>
-      <div class="hero-ctas">
-        <a class="btn-primary" href="signup.html">Começe agora — É grátis!</a>
-        <a class="btn-outline" href="login.html">Já tem conta? Entrar</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Birthday Mixer: Conecte-se com pessoas que fazem aniversário no mesmo dia. Encontre festas coletivas, benefícios exclusivos e crie novas histórias em ambientes seguros e divertidos."
+    />
+    <title>Birthday Mixer — Conecte-se, comemore e crie novas histórias</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <script defer src="scripts/helpers.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <a href="index.html">Birthday Mixer</a>
       </div>
-    </section>
+    </header>
 
-    <section id="how" class="card how">
-      <h2>Como o Birthday Mixer funciona</h2>
-      <p class="lead muted">Em três passos simples, você se conecta a eventos incríveis e faz parte de uma comunidade vibrante.</p>
-      <ol class="steps">
-        <li class="step">
-          <strong> Cadastre-se</strong>
-          <p>Crie sua conta gratuitamente e informe a data do seu aniversário. É rápido e seguro.</p>
-        </li>
-        <li class="step">
-          <strong> Encontre e confirme</strong>
-          <p>Explore locais parceiros próximos a você e confirme sua presença em festas temáticas do dia.</p>
-        </li>
-        <li class="step">
-          <strong> Celebre e conecte-se</strong>
-          <p>Compareça ao evento, ganhe benefícios exclusivos como uma bebida cortesia e interaja com aniversariantes como você.</p>
-        </li>
-      </ol>
-    </section>
+    <main class="container hero">
+      <section class="hero-card card">
+        <h1 class="slogan">Birthday Mixer</h1>
+        <p class="tagline">Conecte-se, comemore e crie novas histórias.</p>
+        <p class="lead">
+          Descubra festas coletivas exclusivas para quem faz aniversário no
+          mesmo dia. Aproveite benefícios como entrada gratuita ou com desconto,
+          ambiente seguro e monitorado, e a oportunidade de conhecer pessoas
+          incríveis enquanto celebra de forma única e memorável.
+        </p>
+        <div class="hero-ctas">
+          <a class="btn-primary" href="public/signup.html"
+            >Começe agora — É grátis!</a
+          >
+          <a class="btn-outline" href="public/login.html"
+            >Já tem conta? Entrar</a
+          >
+        </div>
+      </section>
 
-    <section class="card map-preview">
-      <h2>Descubra locais parceiros próximos</h2>
-      <p class="muted">Visualize eventos em tempo real no mapa interativo. Sua localização é privada e segura.</p>
-      <div id="miniMap" style="height: 320px; border-radius: 10px; margin-top: 1rem;"></div>
-      <div class="map-cta">
+      <section id="how" class="card how">
+        <h2>Como o Birthday Mixer funciona</h2>
+        <p class="lead muted">
+          Em três passos simples, você se conecta a eventos incríveis e faz
+          parte de uma comunidade vibrante.
+        </p>
+        <ol class="steps">
+          <li class="step">
+            <strong> Cadastre-se</strong>
+            <p>
+              Crie sua conta gratuitamente e informe a data do seu aniversário.
+              É rápido e seguro.
+            </p>
+          </li>
+          <li class="step">
+            <strong> Encontre e confirme</strong>
+            <p>
+              Explore locais parceiros próximos a você e confirme sua presença
+              em festas temáticas do dia.
+            </p>
+          </li>
+          <li class="step">
+            <strong> Celebre e conecte-se</strong>
+            <p>
+              Compareça ao evento, ganhe benefícios exclusivos como uma bebida
+              cortesia e interaja com aniversariantes como você.
+            </p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="card map-preview">
+        <h2>Descubra locais parceiros próximos</h2>
+        <p class="muted">
+          Visualize eventos em tempo real no mapa interativo. Sua localização é
+          privada e segura.
+        </p>
+        <div
+          id="miniMap"
+          style="height: 320px; border-radius: 10px; margin-top: 1rem"
+        ></div>
+        <div class="map-cta"></div>
+      </section>
+
+      <section class="card testimonials">
+        <h2>O que nossos usuários dizem</h2>
+        <div class="testimonial-grid">
+          <blockquote class="testimonial">
+            <p>
+              "Fiz amigos incríveis no meu aniversário! O app facilitou tudo e o
+              ambiente foi super seguro."
+            </p>
+            <cite>— Ana S., 28 anos</cite>
+          </blockquote>
+          <blockquote class="testimonial">
+            <p>
+              "Adorei os benefícios no local parceiro. Recomendo para quem quer
+              celebrar de forma diferente."
+            </p>
+            <cite>— João P., 25 anos</cite>
+          </blockquote>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <small>&copy; 2025 Birthday Mixer. Todos os direitos reservados.</small>
+        <nav class="footer-nav">
+          <a href="privacy.html">Política de Privacidade</a>
+          <a href="terms.html">Termos de Uso</a>
+          <a href="contact.html">Contato</a>
+        </nav>
       </div>
-    </section>
+    </footer>
 
-    <section class="card testimonials">
-      <h2>O que nossos usuários dizem</h2>
-      <div class="testimonial-grid">
-        <blockquote class="testimonial">
-          <p>"Fiz amigos incríveis no meu aniversário! O app facilitou tudo e o ambiente foi super seguro."</p>
-          <cite>— Ana S., 28 anos</cite>
-        </blockquote>
-        <blockquote class="testimonial">
-          <p>"Adorei os benefícios no local parceiro. Recomendo para quem quer celebrar de forma diferente."</p>
-          <cite>— João P., 25 anos</cite>
-        </blockquote>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-content">
-      <small>&copy; 2025 Birthday Mixer. Todos os direitos reservados.</small>
-      <nav class="footer-nav">
-        <a href="privacy.html">Política de Privacidade</a>
-        <a href="terms.html">Termos de Uso</a>
-        <a href="contact.html">Contato</a>
-      </nav>
-    </div>
-  </footer>
-
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script defer src="js/maps.js"></script>
-</body>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script defer src="scripts/maps.js"></script>
+  </body>
 </html>
